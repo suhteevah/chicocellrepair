@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chico Cell Repair — Fast, Affordable Phone & Tablet Repair in Chico, CA</title>
+<meta name="description" content="Professional cell phone and tablet repair in Chico, California. Screen replacement, battery swap, water damage recovery. Same-day service, lifetime warranty on parts.">
+<meta name="keywords" content="cell phone repair Chico CA, screen repair Chico, iPhone repair Chico, Samsung repair, tablet repair, battery replacement">
+<meta property="og:title" content="Chico Cell Repair — Phone & Tablet Repair">
+<meta property="og:description" content="Fast, affordable device repair in Chico, CA. Same-day service available.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chicocellrepair.com">
+<link rel="canonical" href="https://chicocellrepair.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-deep: #0f0f0f;
+  --bg-card: #1a1a1a;
+  --bg-elevated: #222222;
+  --text-primary: #f0ece4;
+  --text-secondary: #9a9590;
+  --text-muted: #5c5854;
+  --accent: #e8a849;
+  --accent-glow: #e8a84930;
+  --accent-dim: #c4883a;
+  --success: #5cb87a;
+  --border: #2a2725;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Grain overlay ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px;
+}
+
+/* ── Navigation ── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  background: #0f0f0fcc;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+nav.scrolled { padding: 0.7rem 2rem; background: #0f0f0fee; }
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.nav-logo {
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--bg-deep);
+  letter-spacing: -0.5px;
+}
+
+.nav-brand span {
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -0.3px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+.nav-cta {
+  background: var(--accent) !important;
+  color: var(--bg-deep) !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 600 !important;
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+
+.nav-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px var(--accent-glow);
+}
+
+.nav-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ── Hero ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  background: var(--bg-card);
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.2s forwards;
+}
+
+.hero-badge .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--success);
+  animation: pulse 2s infinite;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  max-width: 800px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.4s forwards;
+}
+
+.hero h1 em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 1.5rem auto 2.5rem;
+  line-height: 1.7;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.6s forwards;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.8s forwards;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  background: var(--accent);
+  color: var(--bg-deep);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px var(--accent-glow);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  background: transparent;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--text-muted);
+  background: var(--bg-card);
+}
+
+/* ── Trust bar ── */
+.trust-bar {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 3rem 2rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 1s forwards;
+}
+
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.trust-item .num {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -1px;
+}
+
+.trust-item .label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ── Section defaults ── */
+section {
+  padding: 6rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.section-sub {
+  color: var(--text-secondary);
+  max-width: 550px;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* ── Services ── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  cursor: default;
+}
+
+.service-card:hover {
+  border-color: var(--accent-dim);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px #00000040;
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: var(--bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--border);
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.3px;
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.service-card .price-tag {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.3rem 0.75rem;
+  background: var(--accent-glow);
+  color: var(--accent);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ── Pricing table ── */
+.pricing-section { background: var(--bg-card); border-radius: 16px; border: 1px solid var(--border); padding: 3rem; margin-top: 3rem; }
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+.pricing-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+}
+
+.pricing-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.pricing-table tr:last-child td { border-bottom: none; }
+
+.pricing-table .repair-name {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pricing-table .repair-name .icon { font-size: 1.1rem; }
+
+.pricing-table .price {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.pricing-table .time {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* ── Process ── */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.step {
+  position: relative;
+  padding: 1.5rem;
+}
+
+.step-num {
+  font-family: var(--serif);
+  font-size: 3rem;
+  color: var(--accent);
+  opacity: 0.3;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.step h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* ── About ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.about-text { line-height: 1.8; }
+.about-text p { color: var(--text-secondary); margin-bottom: 1.25rem; font-size: 0.95rem; }
+.about-text p:first-of-type { color: var(--text-primary); font-size: 1.05rem; }
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.stat-card .stat-num {
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.stat-card .stat-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.3rem;
+}
+
+/* ── Testimonials ── */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.testimonial {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.testimonial .stars { color: var(--accent); font-size: 0.9rem; margin-bottom: 1rem; letter-spacing: 2px; }
+
+.testimonial blockquote {
+  color: var(--text-secondary);
+  font-size: 0.93rem;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+
+.testimonial .author {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.testimonial .author span {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* ── Contact ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.contact-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.contact-item h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.contact-item p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.contact-item a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-item a:hover { text-decoration: underline; }
+
+.contact-map {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border: none;
+  filter: grayscale(1) invert(1) contrast(1.1) brightness(0.7);
+}
+
+/* ── CTA banner ── */
+.cta-banner {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 4rem 3rem;
+  text-align: center;
+  margin: 2rem auto 4rem;
+  max-width: 1100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-banner h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.cta-banner p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.cta-banner .btn-primary { position: relative; }
+
+/* ── Footer ── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-left .nav-logo {
+  width: 28px;
+  height: 28px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+}
+
+.footer-left span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--text-primary); }
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-mobile-toggle { display: block; }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-deep);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+  }
+
+  .hero h1 { letter-spacing: -1px; }
+  .trust-bar { gap: 1.5rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .pricing-table { font-size: 0.85rem; }
+  .pricing-table td, .pricing-table th { padding: 0.75rem 0.5rem; }
+  .cta-banner { padding: 3rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="nav">
+  <a href="#" class="nav-brand">
+    <div class="nav-logo">CC</div>
+    <span>Chico Cell Repair</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:+15305551234" class="nav-cta">Call Now</a></li>
+  </ul>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-badge">
+    <span class="dot"></span>
+    Same-day repairs available — walk-ins welcome
+  </div>
+  <h1>Your device,<br><em>fixed right</em></h1>
+  <p class="hero-sub">Fast, affordable cell phone and tablet repair in Chico, California. Most repairs completed while you wait.</p>
+  <div class="hero-actions">
+    <a href="tel:+15305551234" class="btn-primary">
+      📞 Call for a Quote
+    </a>
+    <a href="#services" class="btn-secondary">
+      View Services →
+    </a>
+  </div>
+
+  <div class="trust-bar">
+    <div class="trust-item">
+      <span class="num">5,000+</span>
+      <span class="label">Devices Repaired</span>
+    </div>
+    <div class="trust-item">
+      <span class="num">4.9★</span>
+      <span class="label">Google Rating</span>
+    </div>
+    <div class="trust-item">
+      <span class="num">30 min</span>
+      <span class="label">Avg Repair Time</span>
+    </div>
+    <div class="trust-item">
+      <span class="num">Lifetime</span>
+      <span class="label">Parts Warranty</span>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="reveal">
+  <span class="section-label">Services</span>
+  <h2 class="section-title">We fix it all</h2>
+  <p class="section-sub">From cracked screens to water damage — we handle every repair with precision and care. No appointment necessary.</p>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">📱</div>
+      <h3>Screen Replacement</h3>
+      <p>Cracked, shattered, or unresponsive displays. OEM-quality screens for iPhone, Samsung, Google Pixel, and more. Most done in 30 minutes.</p>
+      <span class="price-tag">From $59</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔋</div>
+      <h3>Battery Replacement</h3>
+      <p>Phone dying too fast? We replace degraded batteries with high-capacity OEM-spec cells. Instant improvement in battery life.</p>
+      <span class="price-tag">From $39</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">💧</div>
+      <h3>Water Damage Recovery</h3>
+      <p>Dropped in the pool? Toilet? We use ultrasonic cleaning and board-level diagnostics to revive water-damaged devices.</p>
+      <span class="price-tag">From $49</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔌</div>
+      <h3>Charging Port Repair</h3>
+      <p>Loose connection? Not charging? We replace damaged Lightning, USB-C, and Micro-USB ports. No more cable wiggling.</p>
+      <span class="price-tag">From $45</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">💾</div>
+      <h3>Data Recovery</h3>
+      <p>Broken phone with irreplaceable photos? We specialize in recovering data from damaged, unresponsive, or water-damaged devices.</p>
+      <span class="price-tag">From $69</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📟</div>
+      <h3>Tablet & iPad Repair</h3>
+      <p>iPads, Samsung Galaxy Tabs, Surface devices. Screen replacements, battery swaps, and digitizer repairs for all major tablets.</p>
+      <span class="price-tag">From $79</span>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing" class="reveal">
+  <span class="section-label">Transparent Pricing</span>
+  <h2 class="section-title">No surprises, no hidden fees</h2>
+  <p class="section-sub">Upfront pricing on every repair. Free diagnostics — you only pay if we fix it.</p>
+
+  <div class="pricing-section">
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>Repair</th>
+          <th>Price</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="repair-name"><span class="icon">📱</span> iPhone Screen (SE–15 Pro Max)</td>
+          <td class="price">$59 – $199</td>
+          <td class="time">20–45 min</td>
+        </tr>
+        <tr>
+          <td class="repair-name"><span class="icon">📱</span> Samsung Screen (S/Note/A series)</td>
+          <td class="price">$69 – $229</td>
+          <td class="time">30–60 min</td>
+        </tr>
+        <tr>
+          <td class="repair-name"><span class="icon">🔋</span> Battery Replacement (any phone)</td>
+          <td class="price">$39 – $69</td>
+          <td class="time">15–30 min</td>
+        </tr>
+        <tr>
+          <td class="repair-name"><span class="icon">🔌</span> Charging Port (Lightning/USB-C)</td>
+          <td class="price">$45 – $79</td>
+          <td class="time">20–40 min</td>
+        </tr>
+        <tr>
+          <td class="repair-name"><span class="icon">💧</span> Water Damage Diagnostic + Clean</td>
+          <td class="price">$49 – $129</td>
+          <td class="time">1–24 hrs</td>
+        </tr>
+        <tr>
+          <td class="repair-name"><span class="icon">💾</span> Data Recovery</td>
+          <td class="price">$69 – $199</td>
+          <td class="time">1–48 hrs</td>
+        </tr>
+        <tr>
+          <td class="repair-name"><span class="icon">📟</span> iPad / Tablet Screen</td>
+          <td class="price">$79 – $279</td>
+          <td class="time">45–90 min</td>
+        </tr>
+        <tr>
+          <td class="repair-name"><span class="icon">📷</span> Camera Replacement</td>
+          <td class="price">$49 – $119</td>
+          <td class="time">20–40 min</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="reveal">
+  <span class="section-label">Process</span>
+  <h2 class="section-title">How it works</h2>
+  <p class="section-sub">From walk-in to walk-out, we make it painless.</p>
+
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3>Bring it in</h3>
+      <p>Walk in or call ahead. No appointment needed. We're in downtown Chico and easy to find.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3>Free diagnostic</h3>
+      <p>We inspect your device, identify the issue, and give you an honest upfront quote. No charge if you decide not to repair.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3>Expert repair</h3>
+      <p>Our trained technicians fix your device using quality parts. Most repairs are completed while you wait.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <h3>Warranty included</h3>
+      <p>Every repair comes with a lifetime warranty on parts. If anything goes wrong, bring it back — we'll make it right.</p>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="reveal">
+  <span class="section-label">About Us</span>
+  <h2 class="section-title">Chico's trusted repair shop</h2>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p>We're a locally owned cell phone and tablet repair shop based in Chico, California — serving the greater Butte County area including Paradise, Oroville, and Chico State students.</p>
+      <p>Every device that comes through our door gets treated with the same care and attention. We use high-quality OEM-specification parts, and every repair comes backed by our lifetime warranty on parts.</p>
+      <p>Whether you cracked your screen at Bidwell Park or dropped your phone in Big Chico Creek — we've seen it all. And we fix it all.</p>
+    </div>
+
+    <div class="about-stats">
+      <div class="stat-card">
+        <div class="stat-num">5K+</div>
+        <div class="stat-label">Repairs Done</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">4.9</div>
+        <div class="stat-label">Google Stars</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">30m</div>
+        <div class="stat-label">Avg. Repair</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">Parts Warranty</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="reviews" class="reveal">
+  <span class="section-label">Reviews</span>
+  <h2 class="section-title">What Chico says about us</h2>
+  <p class="section-sub">Don't take our word for it — hear from our customers.</p>
+
+  <div class="testimonials-grid">
+    <div class="testimonial">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <blockquote>"Cracked my iPhone screen on a Friday afternoon. Walked in, they had it fixed in 25 minutes. Looks and works like new. Unreal service."</blockquote>
+      <div class="author">Sarah M. <span>— Chico, CA</span></div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <blockquote>"My Samsung wouldn't charge. Other places wanted $150+. These guys replaced the port for $55 and it was done in 20 minutes. Will be coming back."</blockquote>
+      <div class="author">Jake T. <span>— Paradise, CA</span></div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <blockquote>"Dropped my phone in the pool and thought it was toast. They recovered all my photos and got it working again. These guys know what they're doing."</blockquote>
+      <div class="author">Maria L. <span>— Oroville, CA</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="reveal">
+  <span class="section-label">Contact</span>
+  <h2 class="section-title">Come see us</h2>
+  <p class="section-sub">Walk-ins welcome. Call ahead for complex repairs.</p>
+
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <h4>Location</h4>
+          <p>Chico, CA 95928</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div>
+          <h4>Phone</h4>
+          <p><a href="tel:+15305551234">(530) 555-1234</a></p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📧</div>
+        <div>
+          <h4>Email</h4>
+          <p><a href="mailto:info@chicocellrepair.com">info@chicocellrepair.com</a></p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🕐</div>
+        <div>
+          <h4>Hours</h4>
+          <p>Mon – Fri: 10am – 7pm<br>Saturday: 10am – 5pm<br>Sunday: Closed</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🌐</div>
+        <div>
+          <h4>Also Serving</h4>
+          <p>Paradise, Oroville, Magalia, Durham, and all of Butte County</p>
+        </div>
+      </div>
+    </div>
+    <div class="contact-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49336.62069236!2d-121.87!3d39.7285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808327d6e9c884f9%3A0xbb7e1df1ba4705e8!2sChico%2C%20CA!5e0!3m2!1sen!2sus!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<div style="padding: 0 2rem;">
+  <div class="cta-banner reveal">
+    <h2>Broken phone? <em style="font-family:var(--serif);color:var(--accent);font-style:italic;">Let's fix that.</em></h2>
+    <p>Walk in today or give us a call. Free diagnostics, no obligation.</p>
+    <a href="tel:+15305551234" class="btn-primary">📞 (530) 555-1234</a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-left">
+      <div class="nav-logo">CC</div>
+      <span>&copy; 2026 Chico Cell Repair. All rights reserved.</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+// Scroll-triggered nav shrink
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Mobile menu toggle
+document.getElementById('mobileToggle').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+reveals.forEach(el => revealObserver.observe(el));
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.getElementById('navLinks').classList.remove('open');
+    }
+  });
+});
+</script>
+
+<!-- Structured data for local SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Chico Cell Repair",
+  "description": "Professional cell phone and tablet repair in Chico, California. Screen replacement, battery swap, water damage recovery.",
+  "url": "https://chicocellrepair.com",
+  "telephone": "+15305551234",
+  "email": "info@chicocellrepair.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chico",
+    "addressRegion": "CA",
+    "postalCode": "95928",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 39.7285,
+    "longitude": -121.8375
+  },
+  "openingHours": [
+    "Mo-Fr 10:00-19:00",
+    "Sa 10:00-17:00"
+  ],
+  "priceRange": "$$",
+  "image": "https://chicocellrepair.com/og-image.jpg",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "127"
+  },
+  "areaServed": [
+    "Chico, CA",
+    "Paradise, CA",
+    "Oroville, CA",
+    "Magalia, CA",
+    "Durham, CA",
+    "Butte County, CA"
+  ]
+}
+</script>
+
+</body>
+</html>
